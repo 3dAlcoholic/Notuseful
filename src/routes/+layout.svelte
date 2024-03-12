@@ -65,8 +65,11 @@
 </svelte:head>
 
 <Toasts />
+
 <div class="border-4 border-transparent bg-transparent-800 max-w-7xl mx-auto mb-6">
-<div class="bg-transparent-700">    
+<div class="bg-transparent-700"> 
+    
+    
     <div class="mb-8 text-center">
         <img src="{KILOBYTE_LOGO}" class="mx-auto h-64 mb-2" alt="kilobyte logo" />
         
@@ -76,8 +79,9 @@
         </div>
         <p class="text-8xl text-white">Farms & Pools</p>
     </div>
+
     
-    
+   
     <div class="mx-auto text-center w-full md:w-fit space-x-0 md:space-x-2 space-y-1 md:space-y-0 flex flex-col md:flex-row">
         <div class="border-2 border-black bg-yellow-500 w-full md:w-44">
             <a href="/" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-s hover:underline hover:bg-yellow-600 text-white">Home</a>
@@ -144,9 +148,23 @@
 </div>
 {/if}
 
-<footer class="p-4 text-center mb-8">
-    <div class="mx-auto">
-        <a href="https://t.me/KILOBYTEfarm" target="_blank"><img src={TELEGRAM_ICON} class="w-16 mx-auto inline" alt="Join telegram" /></a>
-        <a href="https://twitter.com/KILOBYTEonPulse" target="_blank"><img src={TWITTER_ICON} class="w-16 mx-auto inline" alt="Follow on twitter" /></a>
+<footer class="p-4 text-center mb-8 bg-gray-800 text-white">
+    <div class="mx-auto flex items-center justify-center">
+        <a href="https://twitter.com/EternalReflects" target="_blank" class="mx-2">
+            <img src={TWITTER_ICON} class="w-16 inline" alt="Follow on Twitter" />
+        </a>
+        <div class="mx-2">
+            &copy; Copyright <strong class="text-white">
+                Eternal Reflections
+            </strong>
+            <span class="mx-1">&bull;</span> <!-- Bullet separator -->
+            All Rights Reserved
+        </div>
+        <a href="https://t.me/EternalReflections" target="_blank" class="mx-2">
+            <img src={TELEGRAM_ICON} class="w-16 inline" alt="Join Telegram" />
+        </a>
     </div>
 </footer>
+
+
+

@@ -85,7 +85,7 @@
 
 <div class="text-white my-8 text-center grid grid-cols-1 md:grid-cols-4 gap-2">
     <div class="col-span-2 border-black border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4">Abyss 
+        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4"> Abyss
             <div>
                 {#if farmTokenUSD}
                     {format.price(farmTokenUSD)}
@@ -151,14 +151,8 @@
     {/each}
 </div>
 
-<div class="text-center mt-8 flex flex-cols space-x-1">
-    <div class="border-2 border-black bg-yellow-500 w-full md:w-64">
-        <a 
-            href="/inactive" 
-            class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white">
-            Inactive Farms >
-        </a>
-    </div>
+
+    
     {#if pendingTotal}
     <div class="border-2 border-black bg-yellow-500">
         <button 
@@ -169,4 +163,3 @@
         </button>
     </div>
     {/if}
-</div>
