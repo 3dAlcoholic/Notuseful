@@ -446,7 +446,7 @@
             <div>
                 
                 <div>
-                    <ul class="text-s mt-4 text-left p-2 bg-red-500">
+                    <ul class="text-s mt-4 text-left p-2 bg--500 rounded">
                         <li>Deposit Fee: {info.depositFee}%</li>
                         <li>Withdraw Fee: {info.withdrawFee}%</li>
                         <li>Staking Token: <a href="{info.liquidityLink}" class="underline">{info.displayName}</a></li>
