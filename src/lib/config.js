@@ -142,22 +142,7 @@ export let farms = [
         type: Types.Farm,
         oracle: Oracles.DEXTOP
     },
-    {
-        orderById: 6,
-        displayName: 'USDL/PLS',
-        lpAbbreviation: 'LP',
-        poolId: 7,
-        stakingToken: '0x4476a010C7ae27b0f7C5EAcaE6e5077B052DF26C',
-        liquidityLink: 'https://dex.dextop.pro/add/',
-        depositFee: 1,
-        withdrawFee: 1,
-        poolWeight: 1,
-        isActive: true,
-        compound: false,
-        zaps: false,
-        type: Types.Farm,
-        oracle: Oracles.DEXTOP
-    },
+    
     {
         orderById: 6,
         displayName: 'WETH/PLS',
@@ -174,22 +159,7 @@ export let farms = [
         type: Types.Farm,
         oracle: Oracles.DEXTOP
     },
-    {
-        orderById: 7,
-        displayName: 'USDL/DAI',
-        lpAbbreviation: 'LP',
-        poolId: 6,
-        stakingToken: '0x6a2eF3dFd599f948aCa99Ef84682556548f98396',
-        liquidityLink: 'https://dex.dextop.pro/add/',
-        depositFee: 1,
-        withdrawFee: 1,
-        poolWeight: 1,
-        isActive: true,
-        compound: false,
-        zaps: false,
-        type: Types.Farm,
-        oracle: Oracles.DEXTOP
-    },
+    
     {
         orderById: 7,
         displayName: 'HEX/PLS',
@@ -206,24 +176,9 @@ export let farms = [
         type: Types.Farm,
         oracle: Oracles.DEXTOP
     },
+    
     {
-        orderById: 8,
-        displayName: 'KB',
-        lpAbbreviation: 'KB',
-        poolId: 8,
-        stakingToken: '0xaC55cd59F4d97c50FBeC9b0812352e15BC5d2e59',
-        liquidityLink: 'https://dex.dextop.pro/add/',
-        depositFee: 0,
-        withdrawFee: 0,
-        poolWeight: 2,
-        isActive: true,
-        compound: false,
-        zaps: false,
-        type: Types.Pool,
-        oracle: Oracles.DEXTOP
-    },
-    {
-        orderById: 9,
+        orderById: 2,
         displayName: 'DEX',
         lpAbbreviation: 'DEX',
         poolId: 9,

@@ -392,10 +392,10 @@
                     </svg>
                 {/if}
             </h5>
-            <div class="border-2 border-black bg-yellow-500 w-full">
+            <div class="border-2 border-black bg-blue-500 w-full">
                 <button
                     on:click={harvest}
-                    class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full"
+                    class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded text-xs hover:underline hover:bg-red-600 text-white w-full"
                 >
                     Harvest
                 </button>
@@ -404,7 +404,7 @@
             <div class="border-2 border-black bg-yellow-500 w-full">
                 <button
                     on:click={compound}
-                    class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full"
+                    class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded text-xs hover:underline hover:bg-red-600 text-white w-full"
                 >
                     Compound
                 </button>
@@ -412,7 +412,7 @@
             {/if}
         </div>
         <div class="space-y-2">
-            <h4>🚜 Staked 🚜</h4>
+            <h4>💰 Staked 💰</h4>
             <h5 class="text-center">
                 {#if staked => 0}
                     {format.wei(staked)} <span class="text-xs">{info.lpAbbreviation}</span>
@@ -426,18 +426,18 @@
             <h6 class="text-xs text-green-200">({format.usd(stakedUSD)})</h6>
             {/if}
             <div class="flex space-x-1">
-                <div class="border-2 border-black bg-yellow-500 w-full">
+                <div class="border-2 border-black bg-blue-500 w-full">
                     <button 
                         on:click={openDepositModal} 
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full"
+                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded  text-xs hover:underline hover:bg-red-600 text-white w-full"
                     >
                         Deposit
                     </button>
                 </div>
-                <div class="border-2 border-black bg-yellow-500 w-full">
+                <div class="border-2 border-black bg-blue-500 w-full">
                     <button 
                         on:click={openWithdrawModal} 
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full"
+                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded text-xs hover:underline hover:bg-red-600 text-white w-full"
                     >
                         Withdraw
                     </button>
@@ -446,7 +446,7 @@
             <div>
                 
                 <div>
-                    <ul class="text-xs mt-4 text-left p-2 bg-red-500">
+                    <ul class="text-s mt-4 text-left p-2 bg-red-500">
                         <li>Deposit Fee: {info.depositFee}%</li>
                         <li>Withdraw Fee: {info.withdrawFee}%</li>
                         <li>Staking Token: <a href="{info.liquidityLink}" class="underline">{info.displayName}</a></li>
