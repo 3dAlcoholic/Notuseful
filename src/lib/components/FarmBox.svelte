@@ -317,9 +317,15 @@
             refreshData();
         }, 7000);
     });
+
+
+    
 </script>
-<div class="border-4 border-black w-full bg-green-500 h-fit">
-<div class="shadow-lg p-2 border-t-white border-t-4 border-l-4 border-l-white border-zinc-500 border-r-4 border-b-4 text-white text-center">
+
+
+  
+<div class="border-4 border-transparent w-full bg-transparent-500 h-fit rounded-lg">
+    <div class="shadow-lg p-2 border-t-transparent border-t-4 border-l-4 border-l-transparent border-transparent-500  text-white text-center rounded-lg">
     <div class="p-2">
         <div>
             <h2 class="text-2xl">{info.displayName}</h2>
@@ -358,20 +364,20 @@
             </div>
         </div>
     </div>
-    <div class="border-2 border-black bg-yellow-500 w-full mt-4">
+    <div class="border-2 border-black bg-violet-500 w-full mt-4">
         {#if farmOpen}
-            <button on:click={()=>farmOpen=false} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full">Close</button>
+            <button on:click={()=>farmOpen=false} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white w-full">Close</button>
         {:else}
-            <button on:click={()=>farmOpen=true} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full">Open</button>
+            <button on:click={()=>farmOpen=true} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white w-full">Open</button>
         {/if}
     </div>
     {#if farmOpen}
     <div transition:slide={{ delay: 250, duration: 300, easing: quintOut, axis: 'y' }} class="p-2 space-y-6 mt-4">
         <div class="space-y-2">
-            <h4>🌾 Rewards 🌾</h4>
+            <h4>💥 Rewards 💥</h4>
             <h5>
                 {#if rewards => 0}
-                    {format.wei(rewards)} <span class="text-xs">KB</span>
+                    {format.wei(rewards)} <span class="text-xs">Abyss</span>
                     {#if rewardsAsUSD}
                     <div class="text-xs text-green-200 mt-1">
                         ({format.usd(rewardsAsUSD)})
@@ -589,4 +595,8 @@
     .opacity-inner {
         opacity: 100%;
     }
+
+   
+    
+  
 </style>

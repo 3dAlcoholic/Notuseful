@@ -1,15 +1,15 @@
 
 export const DAPP_URL = "http://kilobyte.farm";
-export const DAPP_TITLE = "KILOBYTE.FARM";
+export const DAPP_TITLE = "Fuk My Life";
 
 export const networkChainId = 369;
 
 export const MASTERCHEF_ADDRESS = "0x24321b16e1AF2FEC2EA8543091257BcbB5873BC7";
 export const NATIVE_TOKEN_ADDRESS = "0xA1077a294dDE1B09bB078844df40758a5D0f9a27"; //WPLS
-export const FARM_TOKEN_ADDRESS = "0xd687FF2C9C5294f4A2bC0300B46eA921dB312063"; //KB
+export const FARM_TOKEN_ADDRESS = "0xaC55cd59F4d97c50FBeC9b0812352e15BC5d2e59"; //KB
 export const STABLECOIN_ADDRESS = "0xefD766cCb38EaF1dfd701853BFCe31359239F305"; //DAI
 export const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
-export const DEAD_ADDRESS = "0x000000000000000000000000000000000000dEaD";
+export const DEAD_ADDRESS = "0x0000000000000000000000000000000000000369";
 export const ZAPPER_ADDRESS = "0xe8ce638E1b97CaBF029B8D6dff8744a0A8275FeB";
 
 //PulseX V1
@@ -237,5 +237,5 @@ export let farms = [
         zaps: false,
         type: Types.Pool,
         oracle: Oracles.DEXTOP
-    } //
+    }
 ]

@@ -18,7 +18,7 @@
     import * as format from '$helpers/format';
 
     // assets
-    import KILOBYTE_LOGO from "$lib/assets/kilobyte-logo.png";
+    import KILOBYTE_LOGO from "$lib/assets/ERS1.png";
     import TELEGRAM_ICON from '$lib/assets/telegram_icon.png';
     import TWITTER_ICON from '$lib/assets/twitter-x_icon.png';
     import "../app.pcss";
@@ -65,8 +65,8 @@
 </svelte:head>
 
 <Toasts />
-<div class="border-4 border-black bg-orange-800 max-w-7xl mx-auto mb-6">
-<div class="bg-blue-700 border-t-white border-t-4 border-l-4 border-l-white p-8 border-r-4 border-b-4 border-zinc-500">
+<div class="border-4 border-transparent bg-transparent-800 max-w-7xl mx-auto mb-6">
+<div class="bg-transparent-700">    
     <div class="mb-8">
         <img src={KILOBYTE_LOGO} class="mx-auto h-64 mb-8" alt="kilobyte logo" />
     </div>
