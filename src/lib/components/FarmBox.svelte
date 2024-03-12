@@ -364,11 +364,14 @@
             </div>
         </div>
     </div>
-    <div class="border-2 border-black bg-violet-500 w-full mt-4">
+    <div class="border-2 border-transparent bg-transparent-500 w-full mt-4 flex justify-center items-center">
         {#if farmOpen}
-            <button on:click={()=>farmOpen=false} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white w-full">Close</button>
+            <button on:click={() => farmOpen = false} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white max-w-xs rounded-lg h-full mx-auto">Close</button>
         {:else}
-            <button on:click={()=>farmOpen=true} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white w-full">Open</button>
+            <button on:click={() => farmOpen = true} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white max-w-xs rounded-lg h-full mx-auto">Open</button>
+      
+    
+      
         {/if}
     </div>
     {#if farmOpen}

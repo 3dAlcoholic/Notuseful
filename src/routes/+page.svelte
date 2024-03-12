@@ -85,7 +85,7 @@
 
 <div class="text-white my-8 text-center grid grid-cols-1 md:grid-cols-4 gap-2">
     <div class="col-span-2 border-black border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4">$KB 
+        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4">Abyss 
             <div>
                 {#if farmTokenUSD}
                     {format.price(farmTokenUSD)}

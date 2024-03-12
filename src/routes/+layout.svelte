@@ -67,27 +67,35 @@
 <Toasts />
 <div class="border-4 border-transparent bg-transparent-800 max-w-7xl mx-auto mb-6">
 <div class="bg-transparent-700">    
-    <div class="mb-8">
-        <img src={KILOBYTE_LOGO} class="mx-auto h-64 mb-8" alt="kilobyte logo" />
+    <div class="mb-8 text-center">
+        <img src="{KILOBYTE_LOGO}" class="mx-auto h-64 mb-2" alt="kilobyte logo" />
+        
+            <div class="flex justify-center items-center">
+                <span class="text-8xl font-bold text-white">Eternal Reflections</span>
+            
+        </div>
+        <p class="text-8xl text-white">Farms & Pools</p>
     </div>
+    
+    
     <div class="mx-auto text-center w-full md:w-fit space-x-0 md:space-x-2 space-y-1 md:space-y-0 flex flex-col md:flex-row">
         <div class="border-2 border-black bg-yellow-500 w-full md:w-44">
-            <a href="/" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white">Farms</a>
+            <a href="/" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-s hover:underline hover:bg-yellow-600 text-white">Home</a>
         </div>
         <div class="border-2 border-black bg-yellow-500 w-full md:w-44">
-            <a href="https://dex.dextop.pro/swap/?outputCurrency=0xaC55cd59F4d97c50FBeC9b0812352e15BC5d2e59" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white">Buy</a>
+            <a href="https://dex.dextop.pro/swap/?outputCurrency=0xaC55cd59F4d97c50FBeC9b0812352e15BC5d2e59" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-s hover:underline hover:bg-yellow-600 text-white">Buy</a>
         </div>
         <div class="border-2 border-black bg-yellow-500 w-full md:w-44">
-            <a href="https://k4rr0ws.github.io/kilobyte/" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white">Docs</a>
+            <a href="https://eternityexplorers.xyz" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-s hover:underline hover:bg-yellow-600 text-white">Miners</a>
         </div>
         <div class="border-2 border-black bg-yellow-500 w-full md:w-44">
-            <a href="https://www.dextools.io/app/en/pulse/pair-explorer/0x4db7c5a1da37f1681459d247ad353c8b4d1f64b7?t=1707266075949" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white">Chart</a>
+            <a href="https://www.dextools.io/app/en/pulse/pair-explorer/0x4db7c5a1da37f1681459d247ad353c8b4d1f64b7?t=1707266075949" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-s hover:underline hover:bg-yellow-600 text-white">Chart</a>
         </div>
         <div class="border-2 border-black bg-yellow-500 w-full md:w-44">
             {#if !$connected}
-                <button on:click={()=>connectModalOpen = true} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full">Connect</button>
+                <button on:click={()=>connectModalOpen = true} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-s hover:underline hover:bg-yellow-600 text-white w-full">Connect</button>
             {:else}
-                <button on:click={disconnectWagmi} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full">{format.address($signerAddress)}</button>
+                <button on:click={disconnectWagmi} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-s hover:underline hover:bg-yellow-600 text-white w-full">{format.address($signerAddress)}</button>
             {/if}
         </div>
     </div>
