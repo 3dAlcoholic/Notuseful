@@ -18,7 +18,7 @@
     import * as format from '$helpers/format';
 
     // assets
-    import KILOBYTE_LOGO from "$lib/assets/ERS1.png";
+    import ERS_LOGO from "$lib/assets/ERS1.png";
     import TELEGRAM_ICON from '$lib/assets/telegram_icon.png';
     import TWITTER_ICON from '$lib/assets/twitter-x_icon.png';
     import "../app.pcss";
@@ -66,12 +66,12 @@
 
 <Toasts />
 
-<div class="border-4 border-transparent bg-transparent-800 max-w-7xl mx-auto mb-6">
+<div class="border-4 border-transparent bg-transparent-800 max-w-5xl mx-auto mb-6">
 <div class="bg-transparent-700"> 
     
     
     <div class="mb-8 text-center">
-        <img src="{KILOBYTE_LOGO}" class="mx-auto h-64 mb-2" alt="kilobyte logo" />
+        <img src="{ERS_LOGO}" class="mx-auto h-64 mb-2" alt="ERS logo" />
         
             <div class="flex justify-center items-center">
                 <span class="text-8xl font-bold text-white">Eternal Reflections</span>
@@ -83,23 +83,21 @@
     
    
     <div class="mx-auto text-center w-full md:w-fit space-x-0 md:space-x-2 space-y-1 md:space-y-0 flex flex-col md:flex-row">
-        <div class="border-2 border-black bg-yellow-500 w-full md:w-44">
-            <a href="/" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-s hover:underline hover:bg-yellow-600 text-white">Home</a>
+        
+        <div class="border-2 border-black bg-blue-500 w-full md:w-44">
+            <a href="https://dex.dextop.pro/swap/?outputCurrency=0xaC55cd59F4d97c50FBeC9b0812352e15BC5d2e59" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded text-s hover:underline hover:bg-red-600 text-white">Buy</a>
         </div>
-        <div class="border-2 border-black bg-yellow-500 w-full md:w-44">
-            <a href="https://dex.dextop.pro/swap/?outputCurrency=0xaC55cd59F4d97c50FBeC9b0812352e15BC5d2e59" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-s hover:underline hover:bg-yellow-600 text-white">Buy</a>
+        <div class="border-2 border-black bg-blue-500 w-full md:w-44">
+            <a href="https://eternityexplorers.xyz" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded text-s hover:underline hover:bg-red-600 text-white">Miners</a>
         </div>
-        <div class="border-2 border-black bg-yellow-500 w-full md:w-44">
-            <a href="https://eternityexplorers.xyz" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-s hover:underline hover:bg-yellow-600 text-white">Miners</a>
+        <div class="border-2 border-black bg-blue-500 w-full md:w-44">
+            <a href="https://www.dextools.io/app/en/pulse/pair-explorer/0x4db7c5a1da37f1681459d247ad353c8b4d1f64b7?t=1707266075949" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded  text-s hover:underline hover:bg-red-600 text-white">Chart</a>
         </div>
-        <div class="border-2 border-black bg-yellow-500 w-full md:w-44">
-            <a href="https://www.dextools.io/app/en/pulse/pair-explorer/0x4db7c5a1da37f1681459d247ad353c8b4d1f64b7?t=1707266075949" class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-s hover:underline hover:bg-yellow-600 text-white">Chart</a>
-        </div>
-        <div class="border-2 border-black bg-yellow-500 w-full md:w-44">
+        <div class="border-2 border-black bg-blue-500 w-full md:w-44">
             {#if !$connected}
-                <button on:click={()=>connectModalOpen = true} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-s hover:underline hover:bg-yellow-600 text-white w-full">Connect</button>
+                <button on:click={()=>connectModalOpen = true} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded text-s hover:underline hover:bg-red-600 text-white w-full">Connect</button>
             {:else}
-                <button on:click={disconnectWagmi} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-s hover:underline hover:bg-yellow-600 text-white w-full">{format.address($signerAddress)}</button>
+                <button on:click={disconnectWagmi} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded  text-s hover:underline hover:bg-red-600 text-white w-full">{format.address($signerAddress)}</button>
             {/if}
         </div>
     </div>
@@ -126,18 +124,18 @@
 
             </div>
             <div class="space-y-1">
-                <div class="border-2 border-black bg-yellow-500">
+                <div class="border-2 border-black bg-blue-500">
                     <button
                         on:click={walletConnect}
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full"
+                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded text-xs hover:underline hover:bg-red-600 text-white w-full"
                     >
                         WalletConnect
                     </button>
                 </div>
-                <div class="border-2 border-black bg-yellow-500">
+                <div class="border-2 border-black bg-blue-500">
                     <button
                         on:click={injectedConnector}
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full"
+                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded text-xs hover:underline hover:bg-red-600 text-white w-full"
                     >
                         Injected Connector
                     </button>

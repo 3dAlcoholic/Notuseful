@@ -84,8 +84,8 @@
 </script>
 
 <div class="text-white my-8 text-center grid grid-cols-1 md:grid-cols-4 gap-2">
-    <div class="col-span-2 border-black border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4"> Abyss
+    <div class="col-span-2 border-transparent border-4">
+        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4 rounded"> Abyss
             <div>
                 {#if farmTokenUSD}
                     {format.price(farmTokenUSD)}
@@ -95,8 +95,8 @@
                 </div>
             </div>
     </div>
-    <div class="col-span-2 border-black border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4">TVL 
+    <div class="col-span-2 border-transparent border-4">
+        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4 rounded">TVL 
             <div>
                 {#if totalTVL}
                     {format.usd(totalTVL)}
@@ -107,8 +107,8 @@
         </div>
     </div>
 
-    <div class="col-span-2 border-black border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4">Total Supply 
+    <div class="col-span-2 border-transparent border-4">
+        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4 rounded">Total Supply 
             <div>
                 {#if totalSupply}
                     {format.wei(totalSupply)}
@@ -119,8 +119,8 @@
         </div>
     </div>
 
-    <div class="col-span-2 border-black border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4">Marketcap 
+    <div class="col-span-2 border-transparent border-4">
+        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4 rounded">Marketcap 
             <div>
                 {#if marketCapUSD}
                 {format.usd(marketCapUSD)}
@@ -130,8 +130,8 @@
             </div>
         </div>
     </div>
-    <div class="col-span-4 border-black border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4">Burned
+    <div class="col-span-4 border-transparent border-4">
+        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4 rounded">Burned
             <div>
                 {#if burnedTotal}
                 {format.wei(burnedTotal)}
@@ -159,7 +159,7 @@
             on:click={claimAll}
             class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full"
         >
-            Claim All ({format.wei(pendingTotal)} $KB)
+            Claim All ({format.wei(pendingTotal)} Abyss)
         </button>
     </div>
     {/if}
