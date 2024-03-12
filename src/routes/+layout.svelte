@@ -18,7 +18,7 @@
     import * as format from '$helpers/format';
 
     // assets
-    import ERS_LOGO from "$lib/assets/logoWithText.png";
+    import ERS_LOGO from "$lib/assets/header.png";
     import TELEGRAM_ICON from '$lib/assets/telegram_icon.png';
     import TWITTER_ICON from '$lib/assets/twitter-x_icon.png';
     import "../app.pcss";
@@ -73,16 +73,9 @@
     
     
     <div class="mb-8 text-center">
-        <img src="{ERS_LOGO}" class="mx-auto h-64 mb-2" alt="ERS logo" />
+        <img src="{ERS_LOGO}" class="mx-auto h-108 mb-2" alt="ERS logo" />
     
-        <div class="flex justify-center items-center">
-            <span class="text-8xl font-bold text-white">Eternal Reflections</span>
-        </div>
-    
-        <p class="text-8xl text-white">Farms & Pools</p>
-    
-        <!-- New line for the maintenance fee -->
-        <p class="text-s text-white">Every Pool and Farm has a 1% Sustainability Fee</p>
+        
     </div>
 
     
