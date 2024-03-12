@@ -80,7 +80,7 @@
         <p class="text-8xl text-white">Farms & Pools</p>
     
         <!-- New line for the maintenance fee -->
-        <p class="text-s text-white">Every Pool and Farm has a 1% Maintenance Fee</p>
+        <p class="text-s text-white">Every Pool and Farm has a 1% Sustainability Fee</p>
     </div>
 
     
