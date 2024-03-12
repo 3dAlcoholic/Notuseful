@@ -18,7 +18,7 @@
     import * as format from '$helpers/format';
 
     // assets
-    import ERS_LOGO from "$lib/assets/ERS1.png";
+    import ERS_LOGO from "$lib/assets/logoWithText.png";
     import TELEGRAM_ICON from '$lib/assets/telegram_icon.png';
     import TWITTER_ICON from '$lib/assets/twitter-x_icon.png';
     import "../app.pcss";
@@ -151,7 +151,7 @@
 </div>
 {/if}
 
-<footer class="p-4 text-center mb-8 bg-gray-800 text-white">
+<footer class="p-4 text-center mb-8 bg-transparent-800 text-white">
     <div class="mx-auto flex items-center justify-center">
         <a href="https://twitter.com/EternalReflects" target="_blank" class="mx-2">
             <img src={TWITTER_ICON} class="w-16 inline" alt="Follow on Twitter" />
