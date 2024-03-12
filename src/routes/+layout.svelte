@@ -18,7 +18,8 @@
     import * as format from '$helpers/format';
 
     // assets
-    import ERS_LOGO from "$lib/assets/header.png";
+    import ERS_LOGO from "$lib/assets/header2.png";
+    import ERS_LOGO2 from "$lib/assets/astro.png";
     import TELEGRAM_ICON from '$lib/assets/telegram_icon.png';
     import TWITTER_ICON from '$lib/assets/twitter-x_icon.png';
     import "../app.pcss";
@@ -70,12 +71,8 @@
 
 <div class="border-4 border-transparent bg-transparent-800 max-w-5xl mx-auto mb-6">
 <div class="bg-transparent-700"> 
-    
-    
     <div class="mb-8 text-center">
-        <img src="{ERS_LOGO}" class="mx-auto h-108 mb-2" alt="ERS logo" />
-    
-        
+        <img src="{ERS_LOGO}" class="mx-auto h-108 mb-2" alt="ERS logo" />   
     </div>
 
     
@@ -145,6 +142,9 @@
 {/if}
 
 <footer class="p-4 text-center mb-8 bg-transparent-800 text-white">
+    <div class="mb-8 text-center">
+        <img src="{ERS_LOGO2}" class="mx-auto h-20 mb-2" alt="ERS logo2" />   
+    </div>
     <div class="mx-auto flex items-center justify-center">
         <a href="https://twitter.com/EternalReflects" target="_blank" class="mx-2">
             <img src={TWITTER_ICON} class="w-16 inline" alt="Follow on Twitter" />
