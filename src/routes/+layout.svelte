@@ -60,6 +60,8 @@
     });
 </script>
 
+
+
 <svelte:head>
     <title>{DAPP_TITLE}</title>
 </svelte:head>
