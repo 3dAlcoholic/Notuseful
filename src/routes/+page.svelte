@@ -87,7 +87,7 @@
     <!-- Box 1 -->
     <div class="col-span-4 border-transparent border-4 relative">
         <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
-        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-violet-900 p-4 rounded">
+        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
                 {#if farmTokenUSD}
                     {format.price(farmTokenUSD)}
@@ -101,7 +101,7 @@
     <!-- Box 2 -->
     <div class="col-span-4 border-transparent border-4 relative ">
         <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
-        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-violet-900 p-4 rounded">
+        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
                 {#if totalTVL}
                     {format.usd(totalTVL)}
@@ -115,7 +115,7 @@
     <!-- Box 3 -->
     <div class="col-span-4 border-transparent border-4 relative">
         <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
-        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-violet-900 p-4 rounded">
+        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
                 {#if totalSupply}
                     {format.wei(totalSupply)}
@@ -129,7 +129,7 @@
     <!-- Box 4 -->
     <div class="col-span-4 border-transparent border-4 relative">
         <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
-        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-violet-900 p-4 rounded">
+        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
                 {#if marketCapUSD}
                     {format.usd(marketCapUSD)}
@@ -143,7 +143,7 @@
     <!-- Box 5 -->
     <div class="col-span-4 border-transparent border-4 relative ">
         <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
-        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-blue-900 p-4 rounded">
+        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
                 {#if burnedTotal}
                     {format.wei(burnedTotal)}
