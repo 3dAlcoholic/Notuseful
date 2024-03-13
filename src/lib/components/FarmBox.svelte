@@ -392,7 +392,7 @@
                     </svg>
                 {/if}
             </h5>
-            <div class="border-2 border-black bg-blue-500 w-full">
+            <div class="border-2 border-transparent bg-transparent-500 w-full">
                 <button
                     on:click={harvest}
                     class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded text-xs hover:underline hover:bg-red-600 text-white w-full"
