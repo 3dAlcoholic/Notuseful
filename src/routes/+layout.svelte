@@ -20,7 +20,7 @@
     // assets
     import ERS_LOGO from "$lib/assets/header2.png";
     import ERS_LOGO2 from "$lib/assets/astro.png";
-    import YOUR_LOGO_URL from "$lib/assets/astro.png";
+    import YOUR_LOGO_URL from "$lib/assets/Buy.png";
     import TELEGRAM_ICON from '$lib/assets/telegram_icon.png';
     import TWITTER_ICON from '$lib/assets/twitter-x_icon.png';
     import "../app.pcss";
@@ -78,10 +78,10 @@
    
     <div class="mx-auto text-center w-full md:w-fit space-x-0 md:space-x-2 space-y-1 md:space-y-0 flex flex-col md:flex-row">
         
-        <div class="border-2 border-transparent bg-blue-500 w-full md:w-44 p-4 rounded cursor-pointer hover:bg-red-600">
+        <div class="border-2 border-transparent bg-transparent-500 w-full md:w-44 p-4 rounded cursor-pointer hover:bg-blue-600">
             <a href="https://dex.dextop.pro/swap/?outputCurrency=0xaC55cd59F4d97c50FBeC9b0812352e15BC5d2e59" class="block text-s text-white hover:underline">
-                <img src="{YOUR_LOGO_URL}" alt="Button Logo" class="mx-auto h-10 w-auto mb-2" />
-                Buy
+                <img src="{YOUR_LOGO_URL}" alt="Button Logo" class="mx-auto h-15 w-auto mb-2" />
+                
             </a>
         </div>
         <div class="border-2 border-black bg-blue-500 w-full md:w-44">
