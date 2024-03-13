@@ -101,7 +101,7 @@
         <div class="border-2 border-transparent bg-transparent-500 w-full md:w-44 p-4 rounded cursor-pointer hover:bg-transparent-600">
             {#if !$connected}
                 <button on:click={() => connectModalOpen = true} class="block text-s text-white hover:underline">
-                    <img src="{CONNECT_LOGO}" alt="Connect Logo" class="h-15 w-auto mr-2">
+                    <img src="{CONNECT_LOGO}" alt="Connect Logo" class="mx-auto h-15 w-auto mr-2">
                 </button>
             {:else}
                 <button on:click={disconnectWagmi} class="block text-s text-white hover:underline">{format.address($signerAddress)}</button>
