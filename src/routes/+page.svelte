@@ -99,7 +99,7 @@
     </div>
 
     <!-- Box 2 -->
-    <div class="col-span-1 border-transparent border-4 relative">
+    <div class="col-span-1 border-transparent border-4 relative ">
         <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
         <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-violet-900 p-4 rounded">
             <div>
