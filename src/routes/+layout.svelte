@@ -121,12 +121,12 @@
 
 {#if connectModalOpen}
 <div transition:fade={{ delay: 128, duration: 256 }} class="z-40 absolute top-0 left-0 insert-0 min-height-100vh bg-black bg-opacity-50 overflow-y-auto h-screen w-full flex justify-center items-center" id="withdrawModal">
-    <div class="relative opacity-inner w-1/4 text-white text-left border-4 border-black bg-green-500">
+    <div class="relative opacity-inner w-1/4 text-white text-left border-4 border-black bg-gray-500">
         <div class="border-t-white border-t-4 border-l-4 border-l-white border-b-4 w-full border-r-4 border-zinc-400 p-6">
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <!-- svelte-ignore a11y-interactive-supports-focus -->
             <div on:click={()=>connectModalOpen=false} class="absolute top-0 right-0 p-2 mr-2 cursor-pointer text-2xl" role="button">x</div>
-            <h2 class="text-2xl mt-4 mb-8 text-center uppercase">Choose Connection</h2>
+            <h2 class="text-2xl mt-4 mb-8 text-center uppercase">Connect Wallet</h2>
             <div class="text-xs mb-1 flex justify-between">
 
             </div>
