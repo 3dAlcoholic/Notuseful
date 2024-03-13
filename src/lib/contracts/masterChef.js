@@ -1,6 +1,6 @@
 import { readContract, prepareWriteContract, writeContract, waitForTransaction } from '@wagmi/core';
 import MasterChefABI from '$lib/abi/MasterChef.json';
-import { MASTERCHEF_ADDRESS, ZERO_ADDRESS } from '$lib/config';
+import { MASTERCHEF_ADDRESS } from '$lib/config';
 
 export const poolLength = async() => {
     const data = await readContract({
@@ -59,31 +59,22 @@ export const pendingRewards = async(poolId, userAddress) => {
     return data;
 }
 
-export const deposit = async(poolId, amount, referee=ZERO_ADDRESS) => {
+export const deposit = async(poolId, amount) => {
     const config = await prepareWriteContract({
         address: MASTERCHEF_ADDRESS,
         abi: MasterChefABI,
         functionName: 'deposit',
-        args: [poolId, amount, referee]
+        args: [poolId, amount]
     });
     return (await writeContract(config));
 }
 
-export const withdraw = async(poolId, amount, referee=ZERO_ADDRESS) => {
+export const withdraw = async(poolId, amount) => {
     const config = await prepareWriteContract({
         address: MASTERCHEF_ADDRESS,
         abi: MasterChefABI,
         functionName: 'withdraw',
-        args: [poolId, amount, ZERO_ADDRESS]
-    })
-    return (await writeContract(config));
-}
-
-export const claimAll = async() => {
-    const config = await prepareWriteContract({
-        address: MASTERCHEF_ADDRESS,
-        abi: MasterChefABI,
-        functionName: 'claimAll',
+        args: [poolId, amount]
     })
     return (await writeContract(config));
 }
@@ -93,7 +84,7 @@ export const claim = async(poolId) => {
         address: MASTERCHEF_ADDRESS,
         abi: MasterChefABI,
         functionName: 'deposit',
-        args: [poolId, 0, ZERO_ADDRESS]
+        args: [poolId, 0]
     })
     return (await writeContract(config));
 }

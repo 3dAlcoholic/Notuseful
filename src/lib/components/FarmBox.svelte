@@ -20,7 +20,7 @@
 
     // =========== CONFIG ============== //
     import { Types, Oracles, DepositTypes } from '$lib/config';
-    import { MASTERCHEF_ADDRESS, FARM_TOKEN_ADDRESS, ZERO_ADDRESS, ZAPPER_ADDRESS } from '$lib/config';
+    import { MASTERCHEF_ADDRESS, FARM_TOKEN_ADDRESS, ZERO_ADDRESS } from '$lib/config';
     import { networkChainId } from '$lib/config';
 
     // ========= UTILS ========//
@@ -30,7 +30,7 @@
     // ============= CONTRACTS ======== //
     import * as erc20 from '$contracts/erc20';
     import * as masterChef from '$contracts/masterChef';
-    import * as zapper from '$contracts/zapper';
+    
 
     // ========== PROPS ============== //
     export let info;
@@ -463,7 +463,7 @@
 
 {#if depositOpen}
 <div transition:fade={{ delay: 128, duration: 256 }} class="z-40 absolute top-0 left-0 insert-0 bg-black bg-opacity-50 overflow-y-auto h-screen w-full flex justify-center items-center" id="depositModal">
-    <div class="relative opacity-inner w-4/5 md:w-1/4 text-white text-left border-4 border-black bg-green-500">
+    <div class="relative opacity-inner w-4/5 md:w-1/4 text-white text-left border-4 border-black bg-gray-500">
         <div class="border-t-white border-t-4 border-l-4 border-l-white border-b-4 w-full border-r-4 border-zinc-400 p-6">
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <!-- svelte-ignore a11y-interactive-supports-focus -->
@@ -472,35 +472,35 @@
             <div class="flex flex-cols mb-8 mx-auto w-fit">
             {#if info.zaps}    
                 {#if depositType == DepositTypes.TOKEN}
-                <div class="border-2 border-black bg-orange-800">
+                <div class="border-2 border-black bg-blue-800">
                     <button 
                         on:click={()=>depositType = DepositTypes.TOKEN} 
-                        class="border-t-orange-500 border-t-2 border-l-2 border-l-orange-500 border-b-2 w-full border-r-2 md:border-r-0 border-orange-900 p-2 text-xs hover:bg-orange-800 text-white"
+                        class="border-t-orange-500 border-t-2 border-l-2 border-l-orange-500 border-b-2 w-full border-r-2 md:border-r-0 border-orange-900 p-2 text-xs hover:bg-blue-800 text-white"
                     >
                         TOKEN
                     </button>
                 </div>
-                <div class="border-2 border-black bg-orange-700">
+                <div class="border-2 border-black bg-blue-700">
                     <button 
                         on:click={()=>depositType = DepositTypes.PLS} 
-                        class="border-t-orange-500 border-t-2 border-l-2 border-l-orange-500 border-b-2 w-full border-r-2 border-orange-900 p-2 text-xs hover:bg-orange-800 text-white"
+                        class="border-t-orange-500 border-t-2 border-l-2 border-l-orange-500 border-b-2 w-full border-r-2 border-orange-900 p-2 text-xs hover:bg-blue-800 text-white"
                     >
                         PLS
                     </button>
                 </div>
                 {:else}
-                <div class="border-2 border-black bg-orange-700">
+                <div class="border-2 border-black bg-blue-700">
                     <button 
                         on:click={()=>depositType = DepositTypes.TOKEN} 
-                        class="border-t-orange-500 border-t-2 border-l-2 border-l-orange-500 border-b-2 w-full border-r-2 md:border-r-0 border-orange-900 p-2 text-xs hover:bg-orange-800 text-white"
+                        class="border-t-orange-500 border-t-2 border-l-2 border-l-orange-500 border-b-2 w-full border-r-2 md:border-r-0 border-orange-900 p-2 text-xs hover:bg-blue-800 text-white"
                     >
                         TOKEN
                     </button>
                 </div>
-                <div class="border-2 border-black bg-orange-800">
+                <div class="border-2 border-black bg-blue-800">
                     <button 
                         on:click={()=>depositType = DepositTypes.PLS} 
-                        class="border-t-orange-500 border-t-2 border-l-2 border-l-orange-500 border-b-2 w-full border-r-2 border-orange-900 p-2 text-xs hover:bg-orange-800 text-white"
+                        class="border-t-orange-500 border-t-2 border-l-2 border-l-orange-500 border-b-2 w-full border-r-2 border-orange-900 p-2 text-xs hover:bg-blue-800 text-white"
                     >
                         PLS
                     </button>
@@ -522,22 +522,22 @@
             </div>
             <div class="space-y-1">
                 <div class="border-2 border-[#28282a]">
-                    <input bind:value={depositAmount} type="text" class="bg-yellow-500 w-full p-2 border-b-2 w-full border-r-2 border-black placeholder-white focus:outline-none text-white text-xs" />
+                    <input bind:value={depositAmount} type="text" class="bg-blue-500 w-full p-2 border-b-2 w-full border-r-2 border-black placeholder-white focus:outline-none text-white text-xs" />
                 </div>
                 {#if allowance > 0 || depositType==DepositTypes.PLS}
-                <div class="border-2 border-black bg-yellow-500">
+                <div class="border-2 border-black bg-blue-500">
                     <button 
                         on:click={deposit}
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full"
+                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white w-full"
                     >
                         Deposit
                     </button>
                 </div>
                 {:else}
-                <div class="border-2 border-black bg-yellow-500">
+                <div class="border-2 border-black bg-blue-500">
                     <button 
                         on:click={approve} 
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full"
+                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white w-full"
                     >
                         Approve Spending
                     </button>
@@ -551,7 +551,7 @@
 
 {#if withdrawOpen}
 <div transition:fade={{ delay: 128, duration: 256 }} class="z-40 absolute top-0 left-0 insert-0 min-height-100vh bg-black bg-opacity-50 overflow-y-auto h-screen w-full flex justify-center items-center" id="withdrawModal">
-    <div class="relative opacity-inner w-1/4 text-white text-left border-4 border-black bg-green-500">
+    <div class="relative opacity-inner w-1/4 text-white text-left border-4 border-black bg-blue-500">
         <div class="border-t-white border-t-4 border-l-4 border-l-white border-b-4 w-full border-r-4 border-zinc-400 p-6">
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <!-- svelte-ignore a11y-interactive-supports-focus -->
@@ -580,10 +580,10 @@
                 <div class="border-2 border-[#28282a]">
                     <input bind:value={withdrawAmount} type="text" class="bg-yellow-500 w-full p-2 border-b-2 w-full border-r-2 border-black placeholder-white focus:outline-none text-white text-xs" />
                 </div>
-                <div class="border-2 border-black bg-yellow-500">
+                <div class="border-2 border-black bg-blue-500">
                     <button
                         on:click={withdraw}
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full"
+                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white w-full"
                     >
                         Withdraw
                     </button>

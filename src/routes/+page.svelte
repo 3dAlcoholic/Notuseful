@@ -37,16 +37,7 @@
         totalTVL += event.detail.amount;
     }
 
-    const claimAll = async() => {
-        try {
-            const { hash } = await masterChef.claimAll();
-            await waitForTransaction({hash});
-            toast.success('Rewards Claimed!');
-            refreshData();
-        } catch (error) {
-            toast.error('Error Claiming');
-        }
-    }
+    
 
     const refreshData = async() => {
         try {
@@ -86,7 +77,7 @@
 <div class="text-white my-8 text-center grid grid-cols-1 md:grid-cols-4 gap-2 ">
     <!-- Box 1 -->
     <div class="col-span-4 border-transparent border-4 relative">
-        <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <img src="price2.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
         <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
                 {#if farmTokenUSD}
@@ -100,7 +91,7 @@
 
     <!-- Box 2 -->
     <div class="col-span-4 border-transparent border-4 relative ">
-        <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <img src="price2.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
         <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
                 {#if totalTVL}
@@ -114,7 +105,7 @@
 
     <!-- Box 3 -->
     <div class="col-span-4 border-transparent border-4 relative">
-        <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <img src="price2.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
         <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
                 {#if totalSupply}
@@ -128,7 +119,7 @@
 
     <!-- Box 4 -->
     <div class="col-span-4 border-transparent border-4 relative">
-        <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <img src="price2.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
         <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
                 {#if marketCapUSD}
@@ -142,7 +133,7 @@
 
     <!-- Box 5 -->
     <div class="col-span-4 border-transparent border-4 relative ">
-        <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <img src="price2.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
         <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
                 {#if burnedTotal}
@@ -167,13 +158,7 @@
 
 
     
-    {#if pendingTotal}
-    <div class="border-2 border-black bg-yellow-500">
-        <button 
-            on:click={claimAll}
-            class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-yellow-600 text-white w-full"
-        >
-            Claim All ({format.wei(pendingTotal)} Abyss)
-        </button>
-    </div>
-    {/if}
+    
+        
+    
+    
