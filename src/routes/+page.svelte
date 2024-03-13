@@ -85,7 +85,7 @@
 
 <div class="text-white my-8 text-center grid grid-cols-1 md:grid-cols-4 gap-2">
     <div class="col-span-2 border-transparent border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4 rounded"> Abyss
+        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-violet-900 w-full mx-auto p-4 rounded"> Abyss
             <div>
                 {#if farmTokenUSD}
                     {format.price(farmTokenUSD)}
@@ -96,7 +96,7 @@
             </div>
     </div>
     <div class="col-span-2 border-transparent border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4 rounded">TVL 
+        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-violet-900 w-full mx-auto p-4 rounded">TVL 
             <div>
                 {#if totalTVL}
                     {format.usd(totalTVL)}
@@ -108,7 +108,7 @@
     </div>
 
     <div class="col-span-2 border-transparent border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4 rounded">Total Supply 
+        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-violet-900 w-full mx-auto p-4 rounded">Total Supply 
             <div>
                 {#if totalSupply}
                     {format.wei(totalSupply)}
@@ -120,7 +120,7 @@
     </div>
 
     <div class="col-span-2 border-transparent border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4 rounded">Marketcap 
+        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-violet-900 w-full mx-auto p-4 rounded">Marketcap 
             <div>
                 {#if marketCapUSD}
                 {format.usd(marketCapUSD)}
@@ -131,7 +131,7 @@
         </div>
     </div>
     <div class="col-span-4 border-transparent border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4 rounded">Burned
+        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4 rounded">🔥 Burned 🔥
             <div>
                 {#if burnedTotal}
                 {format.wei(burnedTotal)}
