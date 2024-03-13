@@ -84,19 +84,24 @@
 </script>
 
 <div class="text-white my-8 text-center grid grid-cols-1 md:grid-cols-4 gap-2">
-    <div class="col-span-2 border-transparent border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-violet-900 w-full mx-auto p-4 rounded"> Abyss
+    <!-- Box 1 -->
+    <div class="col-span-2 border-transparent border-4 relative">
+        <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-violet-900 p-4 rounded">
             <div>
                 {#if farmTokenUSD}
                     {format.price(farmTokenUSD)}
                 {:else}
                     <div class="animate-spin">%</div>
                 {/if}
-                </div>
             </div>
+        </div>
     </div>
-    <div class="col-span-2 border-transparent border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-violet-900 w-full mx-auto p-4 rounded">TVL 
+
+    <!-- Box 2 -->
+    <div class="col-span-2 border-transparent border-4 relative">
+        <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-violet-900 p-4 rounded">
             <div>
                 {#if totalTVL}
                     {format.usd(totalTVL)}
@@ -107,8 +112,10 @@
         </div>
     </div>
 
-    <div class="col-span-2 border-transparent border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-violet-900 w-full mx-auto p-4 rounded">Total Supply 
+    <!-- Box 3 -->
+    <div class="col-span-2 border-transparent border-4 relative">
+        <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-violet-900 p-4 rounded">
             <div>
                 {#if totalSupply}
                     {format.wei(totalSupply)}
@@ -119,22 +126,13 @@
         </div>
     </div>
 
-    <div class="col-span-2 border-transparent border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-violet-900 w-full mx-auto p-4 rounded">Marketcap 
+    <!-- Box 4 -->
+    <div class="col-span-2 border-transparent border-4 relative">
+        <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-violet-900 p-4 rounded">
             <div>
                 {#if marketCapUSD}
-                {format.usd(marketCapUSD)}
-                {:else}
-                    <div class="animate-spin">%</div>
-                {/if}
-            </div>
-        </div>
-    </div>
-    <div class="col-span-4 border-transparent border-4">
-        <div class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white bg-blue-900 w-full mx-auto p-4 rounded">🔥 Burned 🔥
-            <div>
-                {#if burnedTotal}
-                {format.wei(burnedTotal)}
+                    {format.usd(marketCapUSD)}
                 {:else}
                     <div class="animate-spin">%</div>
                 {/if}
@@ -142,7 +140,23 @@
         </div>
     </div>
 
+    <!-- Box 5 -->
+    <div class="col-span-4 border-transparent border-4 relative">
+        <img src="test2.jpg" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-blue-900 p-4 rounded">
+            <div>
+                {#if burnedTotal}
+                    {format.wei(burnedTotal)}
+                {:else}
+                    <div class="animate-spin">%</div>
+                {/if}
+            </div>
+        </div>
+    </div>
 </div>
+
+
+
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     {#each farms as farm}
         {#if !farm.decomissioned}

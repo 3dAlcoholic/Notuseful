@@ -6,7 +6,7 @@ export const networkChainId = 369;
 
 export const MASTERCHEF_ADDRESS = "0x24321b16e1AF2FEC2EA8543091257BcbB5873BC7";
 export const NATIVE_TOKEN_ADDRESS = "0xA1077a294dDE1B09bB078844df40758a5D0f9a27"; //WPLS
-export const FARM_TOKEN_ADDRESS = "0xaC55cd59F4d97c50FBeC9b0812352e15BC5d2e59"; //KB
+export const FARM_TOKEN_ADDRESS = "0xC6B28B2E3Bf9fF26299D540a4D654F7ade4dFdB0"; //KB
 export const STABLECOIN_ADDRESS = "0xefD766cCb38EaF1dfd701853BFCe31359239F305"; //DAI
 export const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 export const DEAD_ADDRESS = "0x0000000000000000000000000000000000000369";
@@ -21,17 +21,12 @@ export let PULSEX_V2_FACTORY_ADDRESS = "0x29ea7545def87022badc76323f373ea1e707c5
 export let PULSEX_V2_ROUTER_ADDRESS = "0x165C3410fC91EF562C50559f7d2289fEbed552d9";
 
 //DEXTOP
-export let DEXTOP_FACTORY_ADDRESS = "0x556F4C3aAa6c6b76e1BBa0409D99D4a483b29997";
-export let DEXTOP_ROUTER_ADDRESS = "0x2221EEa96821E537F100C711dE439F79451c6A01";
 
-//VaporDex
-export let VAPORDEX_FACTORY_ADDRESS = "0xC009a670E2B02e21E7e75AE98e254F467f7ae257";
-export let VAPORDEX_ROUTER_ADDRESS = "0x19C0FC4562A4b76F27f86c676eF5a7e38D12a20d";
 
 export const Oracles = {
     PULSEX_V1: 0,
     PULSEX_V2: 1,
-    DEXTOP: 2
+    
 }
 
 export const Types = {
@@ -62,6 +57,7 @@ export let farms = [
         type: Types.Farm,
         oracle: Oracles.DEXTOP
     },
+
     {
         orderById: 2,
         displayName: 'KB/DEX',
@@ -78,6 +74,7 @@ export let farms = [
         type: Types.Farm,
         oracle: Oracles.DEXTOP
     },
+
     {
         orderById: 2,
         displayName: 'DEX/PLS',
@@ -94,6 +91,7 @@ export let farms = [
         type: Types.Farm,
         oracle: Oracles.DEXTOP
     },
+
     {
         orderById: 3,
         displayName: 'DAI/PLS',
@@ -110,6 +108,7 @@ export let farms = [
         type: Types.Farm,
         oracle: Oracles.DEXTOP
     },
+
     {
         orderById: 4,
         displayName: 'PLSX/PLS',
@@ -126,6 +125,7 @@ export let farms = [
         type: Types.Farm,
         oracle: Oracles.DEXTOP
     },
+
     {
         orderById: 5,
         displayName: 'IMPLS/PLS',

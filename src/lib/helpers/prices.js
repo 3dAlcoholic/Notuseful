@@ -7,8 +7,8 @@ import { parseEther, formatEther, formatUnits } from 'viem';
 
 import { Oracles } from '$lib/config';
 import { FARM_TOKEN_ADDRESS, NATIVE_TOKEN_ADDRESS, STABLECOIN_ADDRESS, PULSEX_V1_FACTORY_ADDRESS, PULSEX_V1_ROUTER_ADDRESS } from '$lib/config';
-import { VAPORDEX_FACTORY_ADDRESS, VAPORDEX_ROUTER_ADDRESS } from '$lib/config'; //VAPORDEX
-import { DEXTOP_FACTORY_ADDRESS, DEXTOP_ROUTER_ADDRESS } from '$lib/config';
+
+import { PULSEX_V2_FACTORY_ADDRESS, PULSEX_V2_ROUTER_ADDRESS } from '$lib/config';
 
 
 export const tokenPrice = async(token, oracle) => {
@@ -21,21 +21,14 @@ export const tokenPrice = async(token, oracle) => {
         } catch (error) {
             console.log('Error fetching price using oracle PULSEX_V1');
         }
-    } else if (oracle == Oracles.VAPORDEX) {
+    
+    } else if (oracle == Oracles.PULSEX_V2) {
         try {
-            let reserves = await Factory.getReservesFromTokens(VAPORDEX_FACTORY_ADDRESS, token, NATIVE_TOKEN_ADDRESS);
-            let quote = await Router.quote(VAPORDEX_ROUTER_ADDRESS, parseEther('1'), reserves[0], reserves[1]);
+            let reserves = await Factory.getReservesFromTokens(PULSEX_V2_FACTORY_ADDRESS, token, NATIVE_TOKEN_ADDRESS);
+            let quote = await Router.quote(PULSEX_V2_ROUTER_ADDRESS, parseEther('1'), reserves[0], reserves[1]);
             return quote;
         } catch (error) {
-            console.log('Error fetching price using oracle TJ_V1');
-        }
-    } else if (oracle == Oracles.DEXTOP) {
-        try {
-            let reserves = await Factory.getReservesFromTokens(DEXTOP_FACTORY_ADDRESS, token, NATIVE_TOKEN_ADDRESS);
-            let quote = await Router.quote(DEXTOP_ROUTER_ADDRESS, parseEther('1'), reserves[0], reserves[1]);
-            return quote;
-        } catch (error) {
-            console.log('Error fetching price using oracle DEXTOP');
+            console.log('Error fetching price using oracle PULSEX_V2');
         }
     }
 }
@@ -52,8 +45,8 @@ export const toUsd = async(amount) => {
 
 export const farmTokenPrice = async() => {
     try {
-        let reserves = await Factory.getReservesFromTokens(DEXTOP_FACTORY_ADDRESS, FARM_TOKEN_ADDRESS, NATIVE_TOKEN_ADDRESS);
-        let quote = await Router.quote(DEXTOP_ROUTER_ADDRESS, parseEther('1'), reserves[0], reserves[1]);
+        let reserves = await Factory.getReservesFromTokens(PULSEX_V2_FACTORY_ADDRESS, FARM_TOKEN_ADDRESS, NATIVE_TOKEN_ADDRESS);
+        let quote = await Router.quote(PULSEX_V2_ROUTER_ADDRESS, parseEther('1'), reserves[0], reserves[1]);
         return quote;
     } catch (e) {
         console.log('Error fetching token price');
@@ -94,7 +87,7 @@ export const calculatePairValue = async(pairToken, amount, oracle) => {
             } catch (error) {
                 console.log(error);
             }
-        } else if (oracle == Oracles.DEXTOP) {
+        } else if (oracle == Oracles.PULSEX_V2) {
             try {
                 let totalValueLocked;
 
@@ -107,16 +100,16 @@ export const calculatePairValue = async(pairToken, amount, oracle) => {
                 let amountToken1 = reserves[1] * amount / totalSupplyLP;
 
                 if (token0 == NATIVE_TOKEN_ADDRESS) {
-                    let tokenOneToNative = await Router.quote(DEXTOP_ROUTER_ADDRESS, amountToken1, reserves[1], reserves[0]);
+                    let tokenOneToNative = await Router.quote(PULSEX_V2_ROUTER_ADDRESS, amountToken1, reserves[1], reserves[0]);
                     totalValueLocked = amountToken0 + tokenOneToNative;
                 } else if (token1 == NATIVE_TOKEN_ADDRESS) {
-                    let tokenZeroToNative = await Router.quote(DEXTOP_ROUTER_ADDRESS, amountToken0, reserves[0], reserves[1]);
+                    let tokenZeroToNative = await Router.quote(PULSEX_V2_ROUTER_ADDRESS, amountToken0, reserves[0], reserves[1]);
                     totalValueLocked = amountToken1 + tokenZeroToNative;
                 } else {
-                    let [reservesNative0, reserves0] = await Factory.getReservesFromTokens(DEXTOP_FACTORY_ADDRESS, NATIVE_TOKEN_ADDRESS, token0);
-                    let [reservesNative1, reserves1] = await Factory.getReservesFromTokens(DEXTOP_FACTORY_ADDRESS, NATIVE_TOKEN_ADDRESS, token1);
-                    let tokenZeroToNative = await Router.quote(DEXTOP_ROUTER_ADDRESS, amountToken0, reserves0, reservesNative0);
-                    let tokenOneToNative = await Router.quote(DEXTOP_ROUTER_ADDRESS, amountToken1, reserves1, reservesNative1);
+                    let [reservesNative0, reserves0] = await Factory.getReservesFromTokens(PULSEX_V2_FACTORY_ADDRESS, NATIVE_TOKEN_ADDRESS, token0);
+                    let [reservesNative1, reserves1] = await Factory.getReservesFromTokens(PULSEX_V2_FACTORY_ADDRESS, NATIVE_TOKEN_ADDRESS, token1);
+                    let tokenZeroToNative = await Router.quote(PULSEX_V2_ROUTER_ADDRESS, amountToken0, reserves0, reservesNative0);
+                    let tokenOneToNative = await Router.quote(PULSEX_V2_ROUTER_ADDRESS, amountToken1, reserves1, reservesNative1);
 
                     totalValueLocked = tokenZeroToNative + tokenOneToNative;
                 }
