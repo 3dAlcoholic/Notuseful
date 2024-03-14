@@ -478,7 +478,10 @@
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <!-- svelte-ignore a11y-interactive-supports-focus -->
             <div on:click={()=>depositOpen=false} class="absolute top-0 right-0 p-2 mr-2 cursor-pointer text-2xl" role="button">x</div>
-            <h2 class="text-2xl mt-4 mb-4 text-center">DEPOSIT</h2>
+            <div>
+                <img src="Deposit.png" alt="Rewards Image" class="h-15 w-auto">
+            </div>
+            
             <div class="flex flex-cols mb-8 mx-auto w-fit">
             {#if info.zaps}    
                 {#if depositType == DepositTypes.TOKEN}
@@ -532,25 +535,28 @@
             </div>
             <div class="space-y-1">
                 <div class="border-2 border-[#28282a]">
-                    <input bind:value={depositAmount} type="text" class="bg-blue-500 w-full p-2 border-b-2 w-full border-r-2 border-black placeholder-white focus:outline-none text-white text-xs" />
+                    <input bind:value={depositAmount} type="text" class="bg-gray-500 w-full p-2 border-b-2 w-full border-r-2 border-black placeholder-white focus:outline-none text-white text-xs" />
                 </div>
                 {#if allowance > 0 || depositType==DepositTypes.PLS}
-                <div class="border-2 border-black bg-blue-500">
+                <div class="border-2 border-black bg-gray-500">
                     <button 
-                        on:click={deposit}
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white w-full"
-                    >
-                        Deposit
+                         on:click={deposit}
+                            class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 w-full"
+                              style="background: url('Deposit.png') no-repeat center center; background-size: cover;" >
+                              <!-- Optional text if needed -->
+                          <span class="sr-only">Deposit</span>
                     </button>
                 </div>
                 {:else}
-                <div class="border-2 border-black bg-blue-500">
+                <div class="border-2 border-black bg-gray-500">
                     <button 
-                        on:click={approve} 
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white w-full"
-                    >
-                        Approve Spending
-                    </button>
+                     on:click={approve} 
+                     class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 w-full"
+                          style="background: url('approve.png') no-repeat center center; background-size: cover;" >
+                    <!-- Optional text if needed -->
+                    <span class="sr-only">Approve Spending</span>
+                   </button>
+
                 </div>
                 {/if}
             </div>
@@ -561,12 +567,15 @@
 
 {#if withdrawOpen}
 <div transition:fade={{ delay: 128, duration: 256 }} class="z-40 absolute top-0 left-0 insert-0 min-height-100vh bg-black bg-opacity-50 overflow-y-auto h-screen w-full flex justify-center items-center" id="withdrawModal">
-    <div class="relative opacity-inner w-1/4 text-white text-left border-4 border-black bg-blue-500">
+    <div class="relative opacity-inner w-1/4 text-white text-left border-4 border-black bg-gray-500">
         <div class="border-t-white border-t-4 border-l-4 border-l-white border-b-4 w-full border-r-4 border-zinc-400 p-6">
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <!-- svelte-ignore a11y-interactive-supports-focus -->
             <div on:click={()=>withdrawOpen=false} class="absolute top-0 right-0 p-2 mr-2 cursor-pointer text-2xl" role="button">x</div>
-            <h2 class="text-2xl mt-4 mb-8 text-center uppercase">Withdraw</h2>
+            <div class="text-center mt-4 mb-8">
+                <img src="withdraw.png" alt="Withdraw" class="mx-auto">
+            </div>
+            
             <div class="text-xs mb-1 flex justify-between">
                 <div>
                     <button 
@@ -588,15 +597,17 @@
             </div>
             <div class="space-y-1">
                 <div class="border-2 border-[#28282a]">
-                    <input bind:value={withdrawAmount} type="text" class="bg-yellow-500 w-full p-2 border-b-2 w-full border-r-2 border-black placeholder-white focus:outline-none text-white text-xs" />
+                    <input bind:value={withdrawAmount} type="text" class="bg-gray-500 w-full p-2 border-b-2 w-full border-r-2 border-black placeholder-white focus:outline-none text-white text-xs" />
                 </div>
-                <div class="border-2 border-black bg-blue-500">
-                    <button
-                        on:click={withdraw}
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white w-full"
-                    >
-                        Withdraw
-                    </button>
+                <div class="border-2 border-black bg-gray-500">
+                    <button 
+                         on:click={withdraw} 
+                            class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 w-full"
+                            style="background: url('withdraw.png') no-repeat center center; background-size: cover;" >
+                          <!-- Optional text if needed -->
+                         <span class="sr-only">Withdraw</span>
+                     </button>
+
                 </div>
             </div>
         </div>
