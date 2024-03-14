@@ -77,7 +77,7 @@
 <div class="text-white my-8 text-center grid grid-cols-1 md:grid-cols-4 gap-2 ">
     <!-- Box 1 -->
     <div class="col-span-4 border-transparent border-4 relative">
-        <img src="price2.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <img src="price.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
         <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
                 {#if farmTokenUSD}
@@ -91,11 +91,11 @@
 
     <!-- Box 2 -->
     <div class="col-span-4 border-transparent border-4 relative ">
-        <img src="price2.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <img src="market.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
         <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
-                {#if totalTVL}
-                    {format.usd(totalTVL)}
+                {#if marketCapUSD}
+                    {format.usd(marketCapUSD)}
                 {:else}
                     <div class="animate-spin">%</div>
                 {/if}
@@ -105,7 +105,7 @@
 
     <!-- Box 3 -->
     <div class="col-span-4 border-transparent border-4 relative">
-        <img src="price2.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <img src="supply.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
         <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
                 {#if totalSupply}
@@ -119,11 +119,11 @@
 
     <!-- Box 4 -->
     <div class="col-span-4 border-transparent border-4 relative">
-        <img src="price2.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <img src="TVL.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
         <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
-                {#if marketCapUSD}
-                    {format.usd(marketCapUSD)}
+                {#if totalTVL}
+                    {format.usd(totalTVL)}
                 {:else}
                     <div class="animate-spin">%</div>
                 {/if}
@@ -133,7 +133,7 @@
 
     <!-- Box 5 -->
     <div class="col-span-4 border-transparent border-4 relative ">
-        <img src="price2.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
+        <img src="Burned.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
         <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>
                 {#if burnedTotal}

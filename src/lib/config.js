@@ -42,8 +42,8 @@ export const DepositTypes = {
 export let farms = [
     {
         orderById: 1,
-        displayName: 'Abyss/PLS',
-        lpAbbreviation: 'LP v2',
+        displayName: 'Abyss/PLS v2',
+        lpAbbreviation: 'LP ',
         poolId: 0,
         stakingToken: '0xD974b6b6Ec41F375849dc7D965A88AE556369234',
         liquidityLink: 'https://pulsex.mypinata.cloud/ipfs/bafybeidea3ibq4lu5t6vk6ihp4iuznjb3ltsdm5y2shv4atxgyd3d33aim/#/liquidity',
@@ -59,8 +59,8 @@ export let farms = [
 
     {
         orderById: 2,
-        displayName: 'DAI/PLS',
-        lpAbbreviation: 'LP v1',
+        displayName: 'DAI/PLS v1',
+        lpAbbreviation: 'LP ',
         poolId: 1,
         stakingToken: '0xE56043671df55dE5CDf8459710433C10324DE0aE',
         liquidityLink: 'https://pulsex.mypinata.cloud/ipfs/bafybeidea3ibq4lu5t6vk6ihp4iuznjb3ltsdm5y2shv4atxgyd3d33aim/#/liquidity',
@@ -93,8 +93,8 @@ export let farms = [
 
     {
         orderById: 4,
-        displayName: 'ERSp/PLS',
-        lpAbbreviation: 'LP v2',
+        displayName: 'ERSp/PLS v2',
+        lpAbbreviation: 'LP',
         poolId: 3,
         stakingToken: '0x80a2ff0e7768af877fb4e9d57f27cfc4a0865ddc',
         liquidityLink: 'https://pulsex.mypinata.cloud/ipfs/bafybeidea3ibq4lu5t6vk6ihp4iuznjb3ltsdm5y2shv4atxgyd3d33aim/#/liquidity',
@@ -110,8 +110,8 @@ export let farms = [
 
     {
         orderById: 5,
-        displayName: 'ERSG/GLASS',
-        lpAbbreviation: 'LP v2',
+        displayName: 'ERSG/GLASS v2',
+        lpAbbreviation: 'LP ',
         poolId: 4,
         stakingToken: '0x2fd98d81903eaee4b2ce8ef664363ce9050d9e51',
         liquidityLink: 'https://pulsex.mypinata.cloud/ipfs/bafybeidea3ibq4lu5t6vk6ihp4iuznjb3ltsdm5y2shv4atxgyd3d33aim/#/liquidity',
