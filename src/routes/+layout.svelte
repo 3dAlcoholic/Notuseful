@@ -82,7 +82,7 @@
     <div class="mx-auto text-center w-full md:w-fit space-x-0 md:space-x-2 space-y-1 md:space-y-0 flex flex-col md:flex-row">
         
         <div class="border-2 border-transparent bg-transparent-500 w-full md:w-44 p-4 rounded cursor-pointer hover:bg-transparent-600">
-            <a href="https://dex.dextop.pro/swap/?outputCurrency=0xaC55cd59F4d97c50FBeC9b0812352e15BC5d2e59" class="block text-s text-white hover:underline">
+            <a href="https://pulsex.mypinata.cloud/ipfs/bafybeidea3ibq4lu5t6vk6ihp4iuznjb3ltsdm5y2shv4atxgyd3d33aim/#/" class="block text-s text-white hover:underline">
                 <img src="{BUY_LOGO}" alt="Button Logo" class="mx-auto h-15 w-auto mb-2" />                
             </a>
         </div>
@@ -93,7 +93,7 @@
         </div>
         
         <div class="border-2 border-transparent bg-transparent-500 w-full md:w-44 p-4 rounded cursor-pointer hover:bg-transparent-600">
-            <a href="https://www.dextools.io/app/en/pulse/pair-explorer/0x4db7c5a1da37f1681459d247ad353c8b4d1f64b7?t=1707266075949" class="block text-s text-white hover:underline">
+            <a href="  " class="block text-s text-white hover:underline">
                 <img src="{CHART_LOGO}" alt="Chart Logo" class="mx-auto h-15 w-auto mb-2" />  
             </a>
         </div>

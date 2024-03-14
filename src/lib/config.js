@@ -110,7 +110,7 @@ export let farms = [
 
     {
         orderById: 5,
-        displayName: 'ERSG/GLASS v2',
+        displayName: 'ERSg/GLASS v2',
         lpAbbreviation: 'LP ',
         poolId: 4,
         stakingToken: '0x2fd98d81903eaee4b2ce8ef664363ce9050d9e51',
