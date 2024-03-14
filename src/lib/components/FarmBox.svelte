@@ -366,10 +366,10 @@
     </div>
     <div class="border-2 border-transparent bg-transparent-500 w-full mt-4 flex justify-center items-center">
         {#if farmOpen}
-            <button on:click={() => farmOpen = false} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white max-w-xs rounded-lg h-full mx-auto">Close</button>
+            <img src="Close.png" alt="Close" on:click={() => farmOpen = false} class="max-w-xs rounded-lg h-full cursor-pointer" />
         {:else}
-            <button on:click={() => farmOpen = true} class="block border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 text-xs hover:underline hover:bg-blue-600 text-white max-w-xs rounded-lg h-full mx-auto">Open</button>
-      
+            <img src="Open.png" alt="Open" on:click={() => farmOpen = true} class="max-w-xs rounded-lg h-full cursor-pointer" />
+       
     
       
         {/if}
@@ -377,7 +377,10 @@
     {#if farmOpen}
     <div transition:slide={{ delay: 250, duration: 300, easing: quintOut, axis: 'y' }} class="p-2 space-y-6 mt-4">
         <div class="space-y-2">
-            <h4>💥 Rewards 💥</h4>
+            <div>
+                <img src="rewards.png" alt="Rewards Image" class="h-15 w-auto">
+            </div>
+            
             <h5>
                 {#if rewards => 0}
                     {format.wei(rewards)} <span class="text-xs">Abyss</span>
@@ -392,14 +395,16 @@
                     </svg>
                 {/if}
             </h5>
-            <div class="border-2 border-transparent bg-transparent-500 w-full">
+            <div class="border-2 border-transparent bg-transparent-500 w-full relative">
+                <img src="Harvest.png" alt="Harvest Image" class="w-full h-full object-cover rounded-md">
                 <button
                     on:click={harvest}
-                    class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded text-xs hover:underline hover:bg-red-600 text-white w-full"
+                    class="absolute inset-0 opacity-0 cursor-pointer p-4 rounded"
                 >
                     Harvest
                 </button>
             </div>
+            
             {#if info.compound}
             <div class="border-2 border-black bg-yellow-500 w-full">
                 <button
@@ -412,7 +417,9 @@
             {/if}
         </div>
         <div class="space-y-2">
-            <h4>💰 Staked 💰</h4>
+            <div>
+                <img src="staked.png" alt="staked Image" class="h-15 w-auto">
+            </div>
             <h5 class="text-center">
                 {#if staked => 0}
                     {format.wei(staked)} <span class="text-xs">{info.lpAbbreviation}</span>
@@ -426,22 +433,25 @@
             <h6 class="text-xs text-green-200">({format.usd(stakedUSD)})</h6>
             {/if}
             <div class="flex space-x-1">
-                <div class="border-2 border-black bg-blue-500 w-full">
+                <div class="border-2 border-black bg-transparent-500 w-full relative">
+                    <img src="Deposit.png" alt="Deposit" class="w-full h-full object-cover rounded-md">
                     <button 
                         on:click={openDepositModal} 
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded  text-xs hover:underline hover:bg-red-600 text-white w-full"
-                    >
+                        class="absolute inset-0 opacity-0 cursor-pointer p-4 rounded">
                         Deposit
                     </button>
                 </div>
-                <div class="border-2 border-black bg-blue-500 w-full">
+                <div class="border-2 border-black bg-transparent-500 w-full relative">
+                    <img src="withdraw.png" alt="Withdraw" class="w-full h-full object-cover rounded-md">
                     <button 
                         on:click={openWithdrawModal} 
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded text-xs hover:underline hover:bg-red-600 text-white w-full"
+                        class="absolute inset-0 opacity-0 cursor-pointer p-4 rounded"
                     >
                         Withdraw
                     </button>
                 </div>
+            </div>
+            
             </div>
             <div>
                 
@@ -456,7 +466,7 @@
                 
             </div>
         </div>
-    </div>
+    
     {/if}
 </div>
 </div>
