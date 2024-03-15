@@ -1,6 +1,6 @@
 
 export const DAPP_URL = "http://kilobyte.farm";
-export const DAPP_TITLE = "Fuk My Life";
+export const DAPP_TITLE = "Eternal Reflections";
 
 export const networkChainId = 369;
 
