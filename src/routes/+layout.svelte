@@ -97,7 +97,7 @@
     </div>
 
      
-    <div class="mx-auto text-center w-full md:w-fit space-x-0 md:space-x-2 space-y-1 md:space-y-0 flex flex-col md:flex-row">
+    <div class="container mx-auto text-center w-full md:w-fit space-x-0 md:space-x-2 space-y-1 md:space-y-0 flex flex-col md:flex-row">
         
         <div class="border-2 border-transparent bg-transparent-500 w-full md:w-44 p-4 rounded cursor-pointer hover:bg-transparent-600">
             <a href="https://pulsex.mypinata.cloud/ipfs/bafybeidea3ibq4lu5t6vk6ihp4iuznjb3ltsdm5y2shv4atxgyd3d33aim/#/" class="block text-s text-white hover:underline">
