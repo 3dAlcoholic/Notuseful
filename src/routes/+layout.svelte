@@ -24,6 +24,8 @@
     import MINER_LOGO from "$lib/assets/Miners.png";
     import CHART_LOGO from "$lib/assets/chart.png";
     import CONNECT_LOGO from "$lib/assets/Connect.png";
+    import DISCONNECT_LOGO from "$lib/assets/disconnect.png";
+
     import TELEGRAM_ICON from '$lib/assets/telegram_icon.png';
     import TWITTER_ICON from '$lib/assets/twitter-x_icon.png';
     import "../app.pcss";
@@ -77,8 +79,24 @@
 <div class="bg-transparent-700"> 
     <div class="mb-8 text-center">
         <img src="{ERS_LOGO}" class="mx-auto h-108 mb-2" alt="ERS logo" />   
-    </div>    
-   
+    </div>  
+    <div class="mx-auto text-center w-full md:w-fit space-x-0 md:space-x-2 space-y-1 md:space-y-0 flex flex-col md:flex-row">
+        <div class="border-2 border-transparent bg-transparent-500 w-full md:w-44 p-4 rounded cursor-pointer hover:bg-transparent-600">
+            {#if $connected}
+                <!-- Display wallet information when connected -->
+                <div class="text-[#00FFFF]">
+                    <!-- Insert user's wallet information here -->
+                    Connected With: {format.address($signerAddress)}
+                </div>
+            {:else}
+                <!-- Display nothing when not connected -->
+                <!-- Alternatively, you can display a message -->
+                <!-- <div class="text-white">Connect Wallet</div> -->
+            {/if}
+        </div>
+    </div>
+
+     
     <div class="mx-auto text-center w-full md:w-fit space-x-0 md:space-x-2 space-y-1 md:space-y-0 flex flex-col md:flex-row">
         
         <div class="border-2 border-transparent bg-transparent-500 w-full md:w-44 p-4 rounded cursor-pointer hover:bg-transparent-600">
@@ -104,7 +122,9 @@
                     <img src="{CONNECT_LOGO}" alt="Connect Logo" class="mx-auto h-15 w-auto mb-2">
                 </button>
             {:else}
-                <button on:click={disconnectWagmi} class="block text-s text-white hover:underline">{format.address($signerAddress)}</button>
+                <button on:click={disconnectWagmi} class="block text-s text-white hover:underline">
+                    <img src="{DISCONNECT_LOGO}" alt="Connect Logo" class="mx-auto h-15 w-auto mb-2">
+                </button>
             {/if}
         </div>
     </div>
@@ -118,6 +138,8 @@
     </div>
 </div>
 </div>
+
+
 
 {#if connectModalOpen}
 <div transition:fade={{ delay: 128, duration: 256 }} class="z-40 absolute top-0 left-0 insert-0  bg-black bg-opacity-50 overflow-y-auto h-screen w-full flex justify-center items-center" id="withdrawModal">
