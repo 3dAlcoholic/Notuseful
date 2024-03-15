@@ -72,7 +72,7 @@ for example <img src="{CONNECT_LOGO}" alt="Connect Logo" class="mx-auto h-15 w-a
 <style>
     @media (max-width: 640px) {
         .connect-box {
-            margin-left: 160px;
+            margin-left: 140px;
         }
     }
     
