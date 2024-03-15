@@ -324,7 +324,7 @@
 
 
   
-<div class="border-4 border-white w-full bg-transparent-500 h-fit rounded-lg">
+<div class="border-4 border-white w-full bg-gray-transparent h-fit rounded-lg">
     <div class="shadow-lg p-2 border-t-transparent border-t-4 border-l-4 border-l-transparent border-transparent-500  text-white text-center rounded-lg">
     <div class="p-2">
         <div>
@@ -433,7 +433,7 @@
             <h6 class="text-xs text-green-200">({format.usd(stakedUSD)})</h6>
             {/if}
             <div class="flex space-x-1">
-                <div class="border-2 border-black bg-transparent-500 w-full relative">
+                <div class="border-2 border-transparent bg-transparent-500 w-full relative">
                     <img src="Deposit.png" alt="Deposit" class="w-full h-full object-cover rounded-md">
                     <button 
                         on:click={openDepositModal} 
@@ -441,7 +441,7 @@
                         Deposit
                     </button>
                 </div>
-                <div class="border-2 border-black bg-transparent-500 w-full relative">
+                <div class="border-2 border-transparent bg-transparent-500 w-full relative">
                     <img src="withdraw.png" alt="Withdraw" class="w-full h-full object-cover rounded-md">
                     <button 
                         on:click={openWithdrawModal} 
@@ -479,7 +479,7 @@
             <!-- svelte-ignore a11y-interactive-supports-focus -->
             <div on:click={()=>depositOpen=false} class="absolute top-0 right-0 p-2 mr-2 cursor-pointer text-2xl" role="button">x</div>
             <div>
-                <img src="Deposit.png" alt="Rewards Image" class="h-15 w-auto">
+                <img src="Deposit.png" alt="deposit Image" class="h-15 w-auto">
             </div>
             
             <div class="flex flex-cols mb-8 mx-auto w-fit">
@@ -534,24 +534,24 @@
                 </div>
             </div>
             <div class="space-y-1">
-                <div class="border-2 border-[#28282a]">
-                    <input bind:value={depositAmount} type="text" class="bg-gray-500 w-full p-2 border-b-2 w-full border-r-2 border-black placeholder-white focus:outline-none text-white text-xs" />
+                <div class="border-2 border-[white]">
+                    <input bind:value={depositAmount} type="text" class="bg-gray-500 w-full p-2 border-b-2 w-full border-r-2 border-transparent placeholder-white focus:outline-none text-white text-xs" />
                 </div>
                 {#if allowance > 0 || depositType==DepositTypes.PLS}
-                <div class="border-2 border-black bg-gray-500">
+                <div class="border-2 border-gray bg-gray-500">
                     <button 
                          on:click={deposit}
-                            class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 w-full"
+                            class="border-b-4 border-r-4 border-gray-500 border-t-gray border-t-4 border-l-4 border-l-gray p-4 w-full"
                               style="background: url('Deposit.png') no-repeat center center; background-size: cover;" >
                               <!-- Optional text if needed -->
                           <span class="sr-only">Deposit</span>
                     </button>
                 </div>
                 {:else}
-                <div class="border-2 border-black bg-gray-500">
+                <div class="border-2 border-white bg-gray-500">
                     <button 
                      on:click={approve} 
-                     class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 w-full"
+                     class="border-b-4 border-r-4 border-gray-500 border-t-gray border-t-4 border-l-4 border-l-gray p-4 w-full"
                           style="background: url('approve.png') no-repeat center center; background-size: cover;" >
                     <!-- Optional text if needed -->
                     <span class="sr-only">Approve Spending</span>
@@ -567,23 +567,19 @@
 
 {#if withdrawOpen}
 <div transition:fade={{ delay: 128, duration: 256 }} class="z-40 absolute top-0 left-0 insert-0 min-height-100vh bg-black bg-opacity-50 overflow-y-auto h-screen w-full flex justify-center items-center" id="withdrawModal">
-    <div class="relative opacity-inner w-1/4 text-white text-left border-4 border-black bg-gray-500">
+    <div class="relative opacity-inner w-4/5 md:w-1/4 text-white text-left border-4 border-black bg-gray-500">
         <div class="border-t-white border-t-4 border-l-4 border-l-white border-b-4 w-full border-r-4 border-zinc-400 p-6">
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <!-- svelte-ignore a11y-interactive-supports-focus -->
             <div on:click={()=>withdrawOpen=false} class="absolute top-0 right-0 p-2 mr-2 cursor-pointer text-2xl" role="button">x</div>
-            <div class="text-center mt-4 mb-8">
-                <img src="withdraw.png" alt="Withdraw" class="mx-auto">
+            <div >
+                <img src="withdraw.png" alt="Withdraw" class="h-15 w-auto">
             </div>
             
             <div class="text-xs mb-1 flex justify-between">
                 <div>
                     <button 
-                        on:click={setMaxWithdraw} 
-                        class="hover:font-bold"
-                    >
-                        [Max]
-                    </button>
+                        on:click={setMaxWithdraw}  class="hover:font-bold" > [Max] </button>
                 </div>
                 <div>
                     {#if staked => 0}
@@ -596,13 +592,13 @@
                 </div>
             </div>
             <div class="space-y-1">
-                <div class="border-2 border-[#28282a]">
-                    <input bind:value={withdrawAmount} type="text" class="bg-gray-500 w-full p-2 border-b-2 w-full border-r-2 border-black placeholder-white focus:outline-none text-white text-xs" />
+                <div class="border-2 border-[white]">
+                    <input bind:value={withdrawAmount} type="text" class="bg-gray-500 w-full p-2 border-b-2 w-full border-r-2 border-transparent placeholder-white focus:outline-none text-white text-xs" />
                 </div>
-                <div class="border-2 border-black bg-gray-500">
+                <div class="border-2 border-gray bg-gray-500">
                     <button 
                          on:click={withdraw} 
-                            class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 w-full"
+                            class="border-b-4 border-r-4 border-gray-500 border-t-gray border-t-4 border-l-4 border-l-gray p-4 w-full"
                             style="background: url('withdraw.png') no-repeat center center; background-size: cover;" >
                           <!-- Optional text if needed -->
                          <span class="sr-only">Withdraw</span>
