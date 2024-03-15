@@ -12,12 +12,21 @@ body {
     font-size: 25px; /* Adjust the font size as needed */
 }
 
+body::-webkit-scrollbar {
+  width: 5px;
+}
 
+body::-webkit-scrollbar-track {
+  background-color: #b0c9ec; /* Light */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #de84e5; /* Dark */
+  border-radius: 5px;
+}
 
 @media (min-width: 640px) {
   .container {
-    max-width: 2xl; /* Adjust as needed */
+    max-width: 100px; /* Adjust as needed */
   }
 }
-
-

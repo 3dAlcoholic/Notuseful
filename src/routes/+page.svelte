@@ -74,9 +74,19 @@
     });
 </script>
 
+<!-- 2x2 on desktop and list on mobile -->
+<style>
+@media (max-width: 640px) {
+    .grid-cols-1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+</style>
+
 <div class="text-white my-8 text-center grid grid-cols-1 md:grid-cols-4 gap-2 ">
     <!-- Box 1 -->
-    <div class="col-span-2 border-transparent border-4 relative ">
+    <div class="col-span-2 border-transparent border-4 relative">
         <img src="price.png" alt="Background Image" class="w-full h-full object-cover rounded-md">
         <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center flex-col bg-opacity-80 bg-transparent-900 p-4 rounded">
             <div>

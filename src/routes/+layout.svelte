@@ -67,7 +67,16 @@
     });
 </script>
 
-
+<!-- for mobile this moves the connect button or anything u specify using "connect-box"
+for example <img src="{CONNECT_LOGO}" alt="Connect Logo" class="mx-auto h-15 w-auto mb-2 connect-box"> -->
+<style>
+    @media (max-width: 640px) {
+        .connect-box {
+            margin-left: 160px;
+        }
+    }
+    
+</style>
 
 <svelte:head>
     <title>{DAPP_TITLE}</title>
@@ -116,14 +125,14 @@
             </a>
         </div>
         
-        <div class="border-2 border-transparent bg-transparent-500 w-full md:w-44  ">
+        <div class="border-2 border-transparent bg-transparent-500 w-full md:w-44">
             {#if !$connected}
                 <button on:click={() => connectModalOpen = true} class="block text-s text-white hover:underline">
-                    <img src="{CONNECT_LOGO}" alt="Connect Logo" class="mx-auto h-15 w-auto mb-2">
+                    <img src="{CONNECT_LOGO}" alt="Connect Logo" class="mx-auto h-15 w-auto mb-2 connect-box">
                 </button>
             {:else}
                 <button on:click={disconnectWagmi} class="block text-s text-white hover:underline">
-                    <img src="{DISCONNECT_LOGO}" alt="Connect Logo" class="mx-auto h-15 w-auto mb-2">
+                    <img src="{DISCONNECT_LOGO}" alt="Connect Logo" class="mx-auto h-15 w-auto mb-2 connect-box">
                 </button>
             {/if}
         </div>
