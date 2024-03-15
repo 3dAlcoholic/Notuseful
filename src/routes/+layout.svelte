@@ -126,26 +126,33 @@
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <!-- svelte-ignore a11y-interactive-supports-focus -->
             <div on:click={()=>connectModalOpen=false} class="absolute top-0 right-0 p-2 mr-2 cursor-pointer text-2xl" role="button">x</div>
-            <h2 class="text-2xl mt-4 mb-8 text-center uppercase">Connect Wallet</h2>
-            <div class="text-xs mb-1 flex justify-between">
+            <div class="text-center mt-4 mb-8">
+                <img src="conwall.png" alt="Connect Wallet" class="mx-auto">
+            </div>
+            
+            <div class="text-s mb-1 flex justify-between">
 
             </div>
             <div class="space-y-1">
-                <div class="border-2 border-black bg-blue-500">
-                    <button
-                        on:click={walletConnect}
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded text-xs hover:underline hover:bg-red-600 text-white w-full"
-                    >
-                        WalletConnect
-                    </button>
+
+            
+                <div class="border-2 border-gray bg-gray-500">
+                    <button 
+                     on:click={walletConnect} 
+                      class="border-b-4 border-r-4 border-zinc-500 border-t-gray border-t-4 border-l-4 border-l-gray p-4 rounded w-full"
+                      style="background: url('wallet.png') no-repeat center center; background-size: cover; color: white;" >
+                         <!-- Optional text if needed -->
+                        
+                       </button>
                 </div>
-                <div class="border-2 border-black bg-blue-500">
-                    <button
-                        on:click={injectedConnector}
-                        class="border-b-4 border-r-4 border-zinc-500 border-t-white border-t-4 border-l-4 border-l-white p-4 rounded text-xs hover:underline hover:bg-red-600 text-white w-full"
-                    >
-                        Injected Connector
-                    </button>
+                <div class="border-2 border-gray bg-gray-500">
+                    <button 
+                       on:click={injectedConnector} 
+                        class="border-b-4 border-r-4 border-zinc-500 border-t-gray border-t-4 border-l-4 border-l-gray p-4 rounded w-full"
+                          style="background: url('injected.png') no-repeat center center; background-size: cover; color: white;" >
+                         <!-- Optional text if needed -->
+                         
+                     </button>
                 </div>
             </div>
         </div>

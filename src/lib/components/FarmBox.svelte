@@ -375,12 +375,12 @@
         {/if}
     </div>
     {#if farmOpen}
-    <div transition:slide={{ delay: 250, duration: 300, easing: quintOut, axis: 'y' }} class="p-2 space-y-6 mt-4">
+    <div transition:slide={{ delay: 250, duration: 300, easing: quintOut, axis: 'y' }} class="p-2 space-y-6 mt-4" style="transition: none;">
         <div class="space-y-2">
             <div>
-                <img src="rewards.png" alt="Rewards Image" class="h-15 w-auto">
+                <img src="rewards1.png" alt="Rewards Image" class="h-15 w-auto">
             </div>
-            
+            <!-- Other content -->            
             <h5>
                 {#if rewards => 0}
                     {format.wei(rewards)} <span class="text-xs">Abyss</span>
@@ -418,7 +418,7 @@
         </div>
         <div class="space-y-2">
             <div>
-                <img src="staked.png" alt="staked Image" class="h-15 w-auto">
+                <img src="staked1.png" alt="staked Image" class="h-15 w-auto">
             </div>
             <h5 class="text-center">
                 {#if staked => 0}
