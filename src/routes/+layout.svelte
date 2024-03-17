@@ -200,7 +200,7 @@ for example <img src="{CONNECT_LOGO}" alt="Connect Logo" class="mx-auto h-15 w-a
             <img src={TWITTER_ICON} class="w-16 inline" alt="Follow on Twitter" />
         </a>
         <div class="mx-2">
-            &copy; Copyright <strong class="text-white">
+            &copy; Copyright <strong class="text-[#00FFFF]">
                 Eternal Reflections
             </strong>
             <span class="mx-1">&bull;</span> <!-- Bullet separator -->
